@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>My Cloud Cafe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+  </head>
+  <body>
+    <h1>Cloud Cafe</h1>
+
+    <div class="content">
+      <form id="add-cafe-form" action="add" update-id="">
+        <input type="text" name="name" placeholder="cafe name" />
+        <input type="text" name="city" placeholder="city" />
+        <button id="form-btn">Add Cafe</button>
+      </form>
+
+      <ul id="cafe-list"></ul>
+    </div>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyB6886OS0U6Hant0qm4nywM5ajsJdBc-8I",
+        authDomain: "sarang-onfire.firebaseapp.com",
+        databaseURL: "https://sarang-onfire.firebaseio.com",
+        projectId: "sarang-onfire",
+        storageBucket: "sarang-onfire.appspot.com",
+        messagingSenderId: "41373768125",
+        appId: "1:41373768125:web:0d0b43b797edea88b4dad4",
+        measurementId: "G-01H98SZJPG",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      const db = firebase.firestore();
+      //db.settings({ timestampsInSnapshots: true });
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
